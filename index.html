@@ -1,244 +1,1003 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Desentupidora Rota Livre 24h</title>
+<meta charset="UTF-8">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4FWMNRRQJ8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<title>Desentupidora Rota Livre 24h | Sorocaba e Votorantim</title>
 
-    gtag('config', 'G-4FWMNRRQJ8');
-  </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Desentupidora 24 horas em Sorocaba, Votorantim e região. Desentupimento de pias, ralos, vasos sanitários, esgoto e limpa fossa. Atendimento rápido, orçamento sem compromisso e garantia.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#071522">
+<link rel="canonical" href="https://desentupidorarotalivre24h.com.br/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Desentupidora Rota Livre 24h">
+<meta property="og:description" content="Desentupidora 24 horas em Sorocaba, Votorantim e região. Atendimento rápido e orçamento sem compromisso.">
+<meta property="og:image" content="https://i.postimg.cc/cJFbPYzC/file-000000009c04720e9c8853e16aab9870.png">
+<meta property="og:url" content="https://desentupidorarotalivre24h.com.br/">
+
+<!-- Favicon -->
+<link rel="icon" href="https://i.postimg.cc/cJFbPYzC/file-000000009c04720e9c8853e16aab9870.png">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4FWMNRRQJ8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-4FWMNRRQJ8');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+  --navy-950:#050D15;
+  --navy-900:#081521;
+  --navy-850:#0C1D2D;
+  --navy-800:#10283D;
+  --navy-750:#153048;
+  --navy-700:#173B59;
+
+  --cyan:#39D8C5;
+  --cyan-soft:#39D8C522;
+
+  --orange:#FF6A2B;
+  --orange-dark:#E9551B;
+
+  --red:#D92F2F;
+
+  --white:#FFFFFF;
+  --paper:#F3F0E7;
+  --paper-dark:#E5E0D3;
+
+  --text:#E7EEF3;
+  --muted:#93A6B6;
+  --muted-soft:#748899;
+
+  --whatsapp:#25D366;
+
+  --shadow:0 18px 50px rgba(0,0,0,.45);
+  --glow:0 0 0 1px rgba(57,216,197,.15), 0 18px 40px rgba(0,0,0,.4);
+  --radius:8px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'IBM Plex Sans',sans-serif;
+  background:
+    radial-gradient(circle at 15% 0%,rgba(57,216,197,.06),transparent 35%),
+    radial-gradient(circle at 90% 60%,rgba(255,106,43,.05),transparent 30%),
+    var(--navy-950);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+img{max-width:100%;}
+button,a{-webkit-tap-highlight-color:transparent;}
+a{color:inherit;}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:4px;}
+
+.display{
+  font-family:'Archivo Expanded',sans-serif;
+  font-weight:800;
+  letter-spacing:.3px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+  height:76px;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0 5%;
+  background:rgba(5,13,21,.96);
+  border-bottom:2px solid var(--cyan);
+  position:sticky;top:0;z-index:2000;
+  backdrop-filter:blur(14px);
+}
+
+.logo-topo{height:47px;width:auto;display:block;}
+
+.header-actions{display:flex;align-items:center;gap:14px;}
+
+.header-phone{
+  display:flex;align-items:center;gap:9px;
+  color:var(--white);text-decoration:none;font-weight:600;
+  padding:10px 17px;
+  border:1px solid rgba(57,216,197,.35);
+  border-radius:4px;
+  transition:.2s;
+}
+.header-phone:hover{border-color:var(--cyan);background:rgba(57,216,197,.08);}
+
+.menu-btn{
+  width:48px;height:48px;
+  border:1px solid rgba(255,255,255,.18);
+  background:transparent;color:white;cursor:pointer;
+  border-radius:4px;font-size:25px;
+  display:flex;align-items:center;justify-content:center;
+  transition:.2s;
+}
+.menu-btn:hover{background:rgba(255,255,255,.08);}
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.58);
+  opacity:0;visibility:hidden;transition:.3s;z-index:1998;
+}
+.menu-overlay.show{opacity:1;visibility:visible;}
+
+.menu{
+  position:fixed;top:0;right:-380px;
+  width:min(350px,90%);height:100vh;
+  background:var(--navy-850);
+  border-left:3px solid var(--cyan);
+  z-index:1999;padding:28px 32px;
+  transition:right .35s ease;
+  box-shadow:-20px 0 60px rgba(0,0,0,.35);
+}
+.menu.show{right:0;}
+
+.menu-top{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-bottom:25px;margin-bottom:25px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.menu-logo{height:42px;}
+
+.close-btn{
+  width:42px;height:42px;
+  border:1px solid rgba(255,255,255,.18);
+  background:none;color:white;font-size:23px;cursor:pointer;border-radius:4px;
+}
+
+.menu a{
+  display:block;color:var(--white);text-decoration:none;
+  font-size:1.08rem;font-weight:600;padding:15px 0;
+  border-bottom:1px solid rgba(255,255,255,.09);
+  transition:.2s;
+}
+.menu a:hover{color:var(--cyan);padding-left:7px;}
+
+.menu-call{
+  margin-top:22px;text-align:center;background:var(--orange);
+  border:none!important;padding:15px!important;border-radius:4px;
+}
+
+/* =========================================================
+   HERO (limpo, sem animação — a tubulação fica na seção Sobre)
+========================================================= */
+
+.hero{
+  position:relative;overflow:hidden;color:white;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(57,216,197,.11),transparent 28%),
+    radial-gradient(circle at 15% 80%,rgba(255,106,43,.09),transparent 25%),
+    var(--navy-950);
+}
+
+.hero-grid{
+  position:relative;z-index:2;
+  max-width:1200px;margin:auto;
+  min-height:560px;
+  padding:80px 5% 70px;
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(310px,.65fr);
+  align-items:center;gap:60px;
+}
+
+.hero-copy{max-width:720px;}
+
+.slogan{
+  display:inline-flex;align-items:center;gap:10px;
+  color:var(--cyan);font-size:.82rem;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;margin-bottom:17px;
+}
+.slogan::before{content:"";width:28px;height:2px;background:var(--orange);}
+
+.hero-tag{
+  display:block;color:#B8C8D5;font-size:.95rem;font-weight:600;margin-bottom:17px;
+}
+
+.hero h1{
+  font-size:clamp(2.4rem,5.2vw,4.35rem);
+  line-height:1.01;text-transform:uppercase;margin-bottom:24px;max-width:760px;
+}
+.hero h1 .accent{color:var(--orange);}
+
+.hero-description{
+  max-width:650px;color:#D5DEE5;font-size:1.12rem;line-height:1.7;margin-bottom:32px;
+}
+
+.btn-row{display:flex;flex-wrap:wrap;gap:13px;}
+
+.btn{
+  min-height:56px;
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:15px 25px;border-radius:4px;text-decoration:none;font-weight:700;
+  transition:transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+.btn:hover{transform:translateY(-3px);filter:brightness(1.07);}
+
+.btn-call{background:var(--red);color:white;box-shadow:0 10px 25px rgba(217,47,47,.22);}
+.btn-whats{background:var(--whatsapp);color:#06150C;box-shadow:0 10px 25px rgba(37,211,102,.18);}
+
+/* =========================================================
+   HERO STATS (painel único — sem repetir na trust-strip)
+========================================================= */
+
+.hero-panel{
+  background:rgba(16,40,61,.88);
+  border:1px solid rgba(57,216,197,.28);
+  border-radius:7px;overflow:hidden;box-shadow:var(--shadow);
+}
+
+.panel-header{
+  padding:17px 22px;
+  background:rgba(57,216,197,.06);
+  border-bottom:1px solid rgba(57,216,197,.18);
+  color:var(--cyan);font-size:.78rem;font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;
+}
+
+.hero-stat{
+  display:flex;align-items:center;gap:16px;padding:22px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero-stat:last-child{border-bottom:none;}
+
+.stat-icon{
+  width:42px;height:42px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(57,216,197,.35);color:var(--cyan);
+  border-radius:4px;font-size:16px;font-weight:700;
+}
+
+.stat-text small{display:block;color:#AEBECC;font-size:.78rem;margin-bottom:2px;}
+.stat-text strong{display:block;color:white;font-size:1rem;}
+
+/* =========================================================
+   TRUST STRIP — reduzida a uma linha, sem repetir o painel
+========================================================= */
+
+.trust-strip{
+  position:relative;z-index:5;background:var(--orange);color:white;
+}
+.trust-inner{
+  max-width:1200px;margin:auto;padding:14px 5%;
+  text-align:center;font-weight:700;font-size:.92rem;
+  letter-spacing:.3px;
+}
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.section{max-width:1200px;margin:auto;padding:95px 5%;position:relative;}
+.section::before{
+  content:"";position:absolute;top:0;left:5%;right:5%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(57,216,197,.22),transparent);
+}
+.section-head{max-width:700px;margin-bottom:55px;}
+
+.eyebrow{
+  display:block;color:var(--orange);font-size:.82rem;font-weight:800;
+  letter-spacing:1.8px;text-transform:uppercase;margin-bottom:8px;
+}
+.section-head h2{
+  font-size:clamp(1.8rem,3.8vw,2.7rem);line-height:1.1;
+  text-transform:uppercase;color:var(--white);
+}
+.section-head p{margin-top:15px;color:var(--muted);font-size:1.05rem;}
+
+/* =========================================================
+   SERVIÇOS — ícones ilustrados (sem fotos de terceiros/concorrentes)
+========================================================= */
+
+.services{background:transparent;}
+
+.service-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+
+.service-card{
+  background:linear-gradient(180deg,var(--navy-850),var(--navy-900));
+  border:1px solid rgba(57,216,197,.14);
+  border-radius:7px;overflow:hidden;
+  box-shadow:var(--glow);
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.service-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 0 1px rgba(57,216,197,.4), 0 24px 50px rgba(0,0,0,.5);
+  border-color:rgba(57,216,197,.55);
+}
+
+.service-icon-wrap{
+  height:190px;position:relative;overflow:hidden;
+  background:var(--navy-950);
+  border-bottom:1px solid rgba(57,216,197,.12);
+}
+.service-icon-wrap img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:saturate(1.05) contrast(1.03);
+  transition:transform .5s ease;
+}
+.service-card:hover .service-icon-wrap img{transform:scale(1.06);}
+
+.service-number{
+  position:absolute;top:15px;left:15px;
+  width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--orange);color:white;border-radius:4px;
+  font-family:'Archivo Expanded',sans-serif;font-size:.85rem;
+}
+
+.service-content{padding:25px;}
+.service-content h3{
+  font-family:'Archivo Expanded',sans-serif;font-size:1.05rem;
+  color:var(--white);text-transform:uppercase;margin-bottom:9px;
+}
+.service-content p{color:var(--muted);font-size:.94rem;line-height:1.65;}
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.benefits-section{background:transparent;}
+.benefits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+
+.benefit{
+  padding:27px;border:1px solid rgba(57,216,197,.14);border-left:4px solid var(--cyan);
+  border-radius:5px;background:linear-gradient(180deg,var(--navy-850),var(--navy-900));
+  box-shadow:0 12px 30px rgba(0,0,0,.3);
+}
+.benefit h3{color:var(--white);font-size:1.05rem;margin-bottom:6px;}
+.benefit p{color:var(--muted);font-size:.93rem;}
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.process-section{background:var(--navy-900);color:white;}
+.process-section .section-head h2{color:white;}
+.process-section .section-head p{color:#AABAC8;}
+
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+
+.process-card{
+  padding:27px 23px;border:1px solid rgba(57,216,197,.22);
+  background:rgba(255,255,255,.035);border-radius:6px;
+}
+.process-number{
+  font-family:'Archivo Expanded',sans-serif;color:var(--orange);
+  font-size:2rem;margin-bottom:15px;
+}
+.process-card h3{font-size:1rem;margin-bottom:8px;}
+.process-card p{color:#AEBECC;font-size:.9rem;}
+
+/* =========================================================
+   ABOUT — com a tubulação animada descendo ao fundo
+========================================================= */
+
+.about-section{
+  position:relative;overflow:hidden;
+  background:transparent;
+}
+
+.plate-schematic{
+  position:absolute;top:0;right:0;height:100%;width:42%;
+  opacity:.22;pointer-events:none;
+}
+.plate-schematic .pipe-outer{
+  fill:none;stroke:var(--navy-700);stroke-width:14;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+.plate-schematic .pipe-inner{
+  fill:none;stroke:var(--navy-750);stroke-width:8;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+.plate-schematic .pipe-highlight{
+  fill:none;stroke:rgba(255,255,255,.14);stroke-width:2;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+.plate-schematic .flange{fill:var(--navy-900);stroke:var(--cyan);stroke-width:2.5;}
+.plate-schematic .flange-bolt{fill:var(--navy-950);}
+.plate-schematic .droplet{fill:var(--cyan);opacity:.9;}
+
+.about-grid{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;
+}
+
+.about-copy h2{
+  color:var(--white);font-size:clamp(1.8rem,3.5vw,2.5rem);
+  line-height:1.1;margin-bottom:18px;
+}
+.about-copy p{color:var(--muted);font-size:1.02rem;margin-bottom:18px;}
+
+.about-side{display:flex;flex-direction:column;gap:24px;}
+
+.team-photo{
+  border-radius:7px;overflow:hidden;
+  border:1px solid rgba(57,216,197,.22);
+  box-shadow:var(--glow);
+  max-height:340px;
+}
+.team-photo img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:saturate(1.05) contrast(1.03);
+}
+
+.about-highlight{
+  margin-top:25px;padding:20px;border-left:4px solid var(--orange);
+  border-top:1px solid rgba(255,106,43,.15);
+  border-right:1px solid rgba(255,106,43,.15);
+  border-bottom:1px solid rgba(255,106,43,.15);
+  background:linear-gradient(180deg,var(--navy-850),var(--navy-900));
+  color:var(--white);font-weight:600;
+}
+
+.spec-plate{
+  background:var(--navy-900);color:white;border-radius:7px;
+  overflow:hidden;box-shadow:var(--shadow);
+}
+.spec-title{
+  padding:18px 22px;color:var(--cyan);font-size:.78rem;font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;
+  border-bottom:1px solid rgba(57,216,197,.2);
+}
+.spec-row{
+  display:flex;justify-content:space-between;gap:20px;padding:17px 22px;
+  border-bottom:1px solid rgba(255,255,255,.08);font-size:.9rem;
+}
+.spec-row:last-child{border-bottom:none;}
+.spec-row span:first-child{color:#9EAFBE;}
+.spec-row span:last-child{color:white;text-align:right;font-weight:600;}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta-section{
+  padding:75px 5%;
+  background:linear-gradient(120deg,#10283D,#081521);
+  color:white;
+}
+.cta-box{
+  max-width:1050px;margin:auto;
+  display:flex;align-items:center;justify-content:space-between;gap:35px;
+}
+.cta-box h2{
+  font-family:'Archivo Expanded',sans-serif;
+  font-size:clamp(1.5rem,3vw,2.4rem);line-height:1.1;
+  text-transform:uppercase;margin-bottom:10px;
+}
+.cta-box p{color:#B9C8D4;}
+.cta-buttons{flex-shrink:0;}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-section{background:transparent;}
+.faq-list{max-width:850px;}
+.faq{border-bottom:1px solid rgba(255,255,255,.1);}
+
+.faq summary{
+  cursor:pointer;list-style:none;padding:20px 0;
+  font-weight:700;color:var(--white);
+  position:relative;padding-right:40px;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{
+  content:"+";position:absolute;right:5px;top:14px;
+  font-size:1.6rem;color:var(--orange);
+}
+.faq[open] summary::after{content:"−";}
+.faq p{color:var(--muted);padding:0 40px 20px 0;font-size:.95rem;}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
+.footer-logo{height:55px;width:auto;margin-bottom:20px;}
+
+.footer-slogan{
+  color:var(--cyan);font-size:.82rem;font-weight:700;
+  letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;
+}
+.footer-contact{color:#B2C0CC;margin-bottom:5px;}
+.footer-phone{color:white;font-size:1.1rem;font-weight:700;}
+.copy{color:#687887;font-size:.78rem;margin-top:25px;}
+
+/* =========================================================
+   WHATSAPP FLOAT
+========================================================= */
+
+.whatsapp-float{
+  position:fixed;right:22px;bottom:28px;width:62px;height:62px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--whatsapp);border:3px solid var(--navy-900);border-radius:50%;
+  box-shadow:0 0 0 3px rgba(57,216,197,.75), 0 12px 30px rgba(0,0,0,.25);
+  z-index:1800;transition:.2s;
+}
+.whatsapp-float:hover{transform:scale(1.08);}
+.whatsapp-float img{width:31px;height:31px;}
+
+.mobile-bar{display:none;}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px){
+  .hero-grid{grid-template-columns:1fr;gap:40px;}
+  .hero-panel{max-width:600px;}
+  .service-grid{grid-template-columns:1fr;max-width:600px;}
+  .process-grid{grid-template-columns:repeat(2,1fr);}
+  .about-grid{grid-template-columns:1fr;gap:40px;}
+  .plate-schematic{display:none;}
+  .cta-box{flex-direction:column;align-items:flex-start;}
+}
+
+@media(max-width:700px){
+  body{padding-bottom:64px;}
+  .header{height:68px;padding:0 4%;}
+  .logo-topo{height:40px;}
+  .header-phone{display:none;}
+  .hero-grid{padding:60px 5% 55px;min-height:auto;}
+  .hero h1{font-size:clamp(2.15rem,10vw,3.2rem);}
+  .hero-description{font-size:1rem;}
+  .btn-row{flex-direction:column;}
+  .btn{width:100%;}
+  .trust-inner{font-size:.82rem;}
+  .section{padding:70px 5%;}
+  .service-grid{gap:20px;}
+  .service-icon-wrap{height:170px;}
+  .benefits-grid{grid-template-columns:1fr;}
+  .process-grid{grid-template-columns:1fr;}
+  .spec-row{flex-direction:column;gap:3px;}
+  .spec-row span:last-child{text-align:left;}
+  .cta-section{padding:60px 5%;}
+  .cta-buttons{width:100%;}
+  .cta-buttons .btn{width:100%;}
+  .whatsapp-float{right:17px;bottom:78px;width:58px;height:58px;}
+  .mobile-bar{
+    position:fixed;display:grid;grid-template-columns:1fr 1fr;
+    bottom:0;left:0;width:100%;height:64px;z-index:1900;
+  }
+  .mobile-bar a{
+    display:flex;align-items:center;justify-content:center;
+    text-decoration:none;font-weight:800;font-size:.9rem;
+  }
+  .bar-call{background:var(--red);color:white;}
+  .bar-whats{background:var(--whatsapp);color:#06150C;}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    scroll-behavior:auto!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+}
+
+</style>
 </head>
-    <meta charset="UTF-8">
-    <title>Rota Livre | Desentupidora em Sorocaba 24h</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Desentupidora em Sorocaba 24 horas. Limpa fossa, desentupimento de ralos e esgoto. Atendimento imediato e preço justo.">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary: #0f172a;    /* Azul Marinho Profundo (Autoridade) */
-            --accent: #1e40af;     /* Azul Real */
-            --secondary: #ff8c00;  /* Laranja (Ação/Atenção) */
-            --success: #25d366;    /* Verde WhatsApp */
-            --danger: #e53935;     /* Vermelho Emergência */
-            --bg-body: #f1f5f9;    /* Cinza Azulado Claríssimo (Tira o "brancão") */
-            --text-dark: #1e293b;
-        }
 
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif; scroll-behavior: smooth;}
-
-        body { background: var(--bg-body); color: var(--text-dark); overflow-x: hidden; line-height: 1.6; }
-
-        /* HEADER */
-        .header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 12px 5%; background: #fff; border-bottom: 4px solid var(--secondary);
-            position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .logo-topo { height: 50px; width: auto; }
-        .menu-btn { font-size: 32px; color: var(--primary); cursor: pointer; }
-
-        /* HERO SECTION */
-        .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
-                        url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80');
-            background-size: cover; background-position: center;
-            color: #fff; padding: 100px 5% 120px; text-align: center;
-        }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        .hero h1 span { color: var(--secondary); }
-        .hero p { font-size: 1.2rem; margin-bottom: 35px; max-width: 800px; margin-inline: auto; opacity: 0.95; }
-
-        /* HIGHLIGHTS (Cards que quebram a transição) */
-        .highlights {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px; margin: -60px auto 40px; padding: 0 5%; max-width: 1100px;
-        }
-        .hl-card {
-            background: var(--primary); color: #fff; padding: 30px 20px; border-radius: 12px; 
-            text-align: center; border-bottom: 5px solid var(--secondary);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: 0.3s;
-        }
-        .hl-card h3 { color: var(--secondary); font-size: 1.8rem; margin-bottom: 5px; }
-        .hl-card p { font-weight: 500; font-size: 0.9rem; text-transform: uppercase; }
-
-        /* BUTTONS */
-        .btn-container { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-        .btn {
-            padding: 18px 35px; border-radius: 8px; font-weight: 700;
-            text-decoration: none; transition: 0.3s; display: flex; align-items: center; gap: 10px;
-            text-transform: uppercase; letter-spacing: 0.5px;
-        }
-        .btn-call { background: var(--danger); color: #fff; box-shadow: 0 4px 15px rgba(229, 57, 53, 0.3); }
-        .btn-whats { background: var(--success); color: #fff; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
-        .btn:hover { transform: translateY(-3px); filter: brightness(1.1); }
-
-        /* SERVIÇOS */
-        .section { padding: 80px 5%; max-width: 1200px; margin: auto; }
-        .section h2 { text-align: center; font-size: 2.2rem; margin-bottom: 50px; color: var(--primary); position: relative; }
-        .section h2::after { content: ''; width: 80px; height: 5px; background: var(--secondary); position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); }
-
-        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        
-        /* NOVOS CARDS ESCUROS */
-        .card { 
-            background: var(--primary); /* Fundo Azul Escuro */
-            border-radius: 15px; 
-            overflow: hidden; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Sombra mais forte */
-            border: 1px solid rgba(255,255,255,0.05); /* Bordinha sutil */
-            transition: 0.3s;
-        }
-        .card:hover { transform: translateY(-5px); }
-        .card img { 
-            width: 100%; 
-            height: 220px; 
-            object-fit: cover; 
-            filter: saturate(1.1); 
-            border-bottom: 4px solid var(--secondary); /* Linha laranja abaixo da foto */
-        }
-        .card-content { padding: 30px; }
-        .card h3 { 
-            margin-bottom: 12px; 
-            color: var(--secondary) !important; /* Título Laranja */
-            font-size: 1.5rem;
-        }
-        .card p { 
-            color: #fff; /* Descrição em Branco */
-            opacity: 0.9;
-            font-size: 1rem;
-        }
-
-        /* SEÇÃO ESCURA (SOBRE) */
-        .about-dark { background: var(--primary); color: #fff; padding: 80px 5%; text-align: center; }
-        .about-dark h2 { color: #fff; margin-bottom: 20px; }
-        .about-dark p { max-width: 900px; margin: 0 auto; font-size: 1.1rem; opacity: 0.9; }
-
-        /* MENU MOBILE */
-        .menu { position: fixed; top: 0; right: -100%; width: 300px; height: 100%; background: var(--primary); padding: 60px 40px; transition: 0.4s; z-index: 1001; }
-        .menu.show { right: 0; }
-        .menu a { display: block; color: #fff; text-decoration: none; font-size: 1.3rem; margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
-        .close-btn { position: absolute; top: 25px; right: 25px; font-size: 30px; color: #fff; cursor: pointer; }
-
-        /* WHATSAPP FLOAT */
-        .whatsapp-float {
-            position: fixed; bottom: 100px; right: 25px; background: var(--success);
-            width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.4); z-index: 999; text-decoration: none; transition: 0.3s;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); }
-
-        /* BARRA DE CONTATO MOBILE */
-        .mobile-bar {
-            display: none; position: fixed; bottom: 0; width: 100%; background: #fff;
-            grid-template-columns: 1fr 1fr; z-index: 1000; box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
-        }
-        .mobile-bar a { text-align: center; padding: 20px; text-decoration: none; font-weight: 700; color: #fff; font-size: 1rem; }
-        .bar-call { background: var(--danger); }
-        .bar-whats { background: var(--success); }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.1rem; }
-            .mobile-bar { display: grid; }
-            .whatsapp-float { bottom: 95px; }
-            .section { padding-bottom: 110px; }
-            .highlights { grid-template-columns: 1fr 1fr; }
-        }
-    </style>
-</head>
 <body>
 
-    <header class="header">
-        <img src="https://i.postimg.cc/cJFbPYzC/file-000000009c04720e9c8853e16aab9870.png" class="logo-topo" alt="Rota Livre">
-        <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    </header>
+<!-- HEADER -->
+<header class="header">
+  <a href="#home" aria-label="Rota Livre Desentupidora">
+    <img src="https://i.postimg.cc/cJFbPYzC/file-000000009c04720e9c8853e16aab9870.png" class="logo-topo" alt="Rota Livre Desentupidora 24h">
+  </a>
+  <div class="header-actions">
+    <a href="tel:+5515996076661" class="header-phone" aria-label="Ligar para Rota Livre">📞 (15) 99607-6661</a>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">☰</button>
+  </div>
+</header>
 
-    <nav class="menu" id="menu">
-        <span class="close-btn" onclick="toggleMenu()">✕</span>
-        <a href="#home" onclick="toggleMenu()">Início</a>
-        <a href="#servicos" onclick="toggleMenu()">Serviços</a>
-        <a href="#sobre" onclick="toggleMenu()">Sobre a Empresa</a>
-        <a href="tel:15996076661" style="color: var(--secondary); font-weight: bold;">LIGAR AGORA</a>
-    </nav>
+<!-- MENU -->
+<div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+<nav class="menu" id="menu">
+  <div class="menu-top">
+    <img src="https://i.postimg.cc/cJFbPYzC/file-000000009c04720e9c8853e16aab9870.png" class="menu-logo" alt="Rota Livre">
+    <button class="close-btn" onclick="toggleMenu()" aria-label="Fechar menu">✕</button>
+  </div>
+  <a href="#home" onclick="closeMenu()">Início</a>
+  <a href="#servicos" onclick="closeMenu()">Serviços</a>
+  <a href="#beneficios" onclick="closeMenu()">Por que escolher a Rota Livre</a>
+  <a href="#como-funciona" onclick="closeMenu()">Como funciona</a>
+  <a href="#sobre" onclick="closeMenu()">Sobre a empresa</a>
+  <a href="#faq" onclick="closeMenu()">Dúvidas frequentes</a>
+  <a href="tel:+5515996076661" class="menu-call">📞 Ligar agora</a>
+</nav>
 
-    <section class="hero" id="home">
-        <h1>Rota <span>Livre</span> 24h</h1>
-        <p>Desentupidora em Sorocaba com frota própria e equipamentos de ponta. Atendimento imediato, resolvemos sem quebra-quebra e com o melhor custo-benefício da região.</p>
-        <div class="btn-container">
-            <a href="tel:015996076661" class="btn btn-call">📞 Chamar Urgente</a>
-            <a href="https://wa.me/5515996076661" class="btn btn-whats">💬 WhatsApp</a>
-        </div>
-    </section>
-
-    <div class="highlights">
-        <div class="hl-card"><h3>24h</h3><p>Sempre Aberto</p></div>
-        <div class="hl-card"><h3>0$</h3><p>Visita Grátis</p></div>
-        <div class="hl-card"><h3>⚡</h3><p>Chegada em 30min</p></div>
-        <div class="hl-card"><h3>✔</h3><p>Garantia Total</p></div>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="slogan">Excelência em cada detalhe</span>
+      <span class="hero-tag">Sorocaba, Votorantim e região • Atendimento 24 horas</span>
+      <h1 class="display">Entupiu? <span class="accent">A solução certa existe.</span></h1>
+      <p class="hero-description">
+        Desentupimento residencial e comercial com atendimento rápido, equipamentos adequados
+        para cada situação e serviço realizado com cuidado, transparência e limpeza.
+      </p>
+      <div class="btn-row">
+        <a href="tel:+5515996076661" class="btn btn-call">📞 Chamar agora</a>
+        <a href="https://wa.me/5515996076661?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20ou%20tirar%20uma%20dúvida." class="btn btn-whats" target="_blank" rel="noopener">💬 Orçamento pelo WhatsApp</a>
+      </div>
     </div>
 
-    <section class="section" id="servicos">
-        <h2>Serviços Especializados</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="https://desentupidoranazonanorte.srv.br/wp-content/uploads/2022/06/Desentupidora-de-ralo-3.jpg" alt="Ralos e Pias">
-                <div class="card-content">
-                    <h3>Pias e Ralos</h3>
-                    <p>Limpeza profunda com máquinas rotativas que removem gordura e detritos sem danificar o encanamento.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://www.limpafossa.com.br/wp-content/uploads/2018/05/limpeza-de-fossa-abc-paulista-e1672661448801.jpg" alt="Limpa Fossa">
-                <div class="card-content">
-                    <h3>Limpa Fossa</h3>
-                    <p>Caminhão auto-vácuo de última geração para esgotamento de fossas e caixas de gordura industriais.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://desentupidoranazonanorte.srv.br/wp-content/uploads/2022/06/desentupimento-de-vaso-sanitario-1.jpg" alt="Vasos Sanitários">
-                <div class="card-content">
-                    <h3>Vasos e Esgoto</h3>
-                    <p>Desobstrução de vasos sanitários e redes de esgoto principais com hidrojateamento de alta pressão.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="hero-panel">
+      <div class="panel-header">Atendimento Rota Livre</div>
+      <div class="hero-stat">
+        <div class="stat-icon">24h</div>
+        <div class="stat-text"><small>Disponibilidade</small><strong>Atendimento 24 horas</strong></div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-icon">✓</div>
+        <div class="stat-text"><small>Orçamento</small><strong>Sem compromisso</strong></div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-icon">⚙</div>
+        <div class="stat-text"><small>Atendimento</small><strong>Residencial e comercial</strong></div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-icon">★</div>
+        <div class="stat-text"><small>Compromisso</small><strong>Serviço com garantia</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="about-dark" id="sobre">
-        <h2>Experiência e Confiança</h2>
-        <p>
-            A Rota Livre 24h nasceu para resolver problemas hidráulicos com rapidez e transparência. Atendemos Sorocaba, Votorantim e toda a região metropolitana. Nossa equipe é treinada para oferecer soluções definitivas com preço justo e limpeza pós-serviço.
-        </p>
-    </section>
+<!-- TRUST STRIP (uma linha só, sem repetir o painel do hero) -->
+<div class="trust-strip">
+  <div class="trust-inner">⚡ Atendimento rápido · 📍 Sorocaba e região · 🛠️ Equipamento adequado a cada obstrução</div>
+</div>
 
-    <footer style="background: #000; color: #fff; padding: 50px 5%; text-align: center;">
-        <p><strong>Rota Livre Desentupidora 24h</strong></p>
-        <p>Sorocaba - SP e Região</p>
-        <div style="margin-top: 20px; font-size: 0.85rem; opacity: 0.5;">
-            © 2026 Rota Livre. Todos os direitos reservados.
-        </div>
-    </footer>
+<!-- SERVIÇOS -->
+<section class="section services" id="servicos">
+  <div class="section-head">
+    <span class="eyebrow">O que resolvemos</span>
+    <h2 class="display">Desentupimento especializado</h2>
+    <p>Atendimento para os principais problemas de entupimento em residências, comércios, condomínios e outros ambientes.</p>
+  </div>
 
-    <a href="https://wa.me/5515996076661" class="whatsapp-float">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="38" alt="WhatsApp">
-    </a>
+  <div class="service-grid">
 
-    <div class="mobile-bar">
-        <a href="tel:015996076661" class="bar-call">LIGAR AGORA</a>
-        <a href="https://wa.me/5515996076661" class="bar-whats">WHATSAPP</a>
+    <article class="service-card">
+      <div class="service-icon-wrap">
+        <span class="service-number">01</span>
+        <img src="images/servico-pia-ralo.jpg" alt="Desentupimento de pia e ralo realizado pela Rota Livre" loading="lazy">
+      </div>
+      <div class="service-content">
+        <h3>Pias e ralos</h3>
+        <p>Desobstrução de pias, ralos e tubulações com equipamentos adequados para remover gordura, resíduos e outros materiais.</p>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon-wrap">
+        <span class="service-number">02</span>
+        <img src="images/servico-limpa-fossa.jpg" alt="Serviço de limpa fossa realizado pela Rota Livre" loading="lazy">
+      </div>
+      <div class="service-content">
+        <h3>Limpa fossa</h3>
+        <p>Atendimento para limpeza e esgotamento de fossas, conforme a necessidade do local e do sistema.</p>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <div class="service-icon-wrap">
+        <span class="service-number">03</span>
+        <img src="images/servico-vasos-esgoto.jpg" alt="Desentupimento de esgoto realizado pela Rota Livre" loading="lazy">
+      </div>
+      <div class="service-content">
+        <h3>Vasos e esgoto</h3>
+        <p>Desentupimento de vasos sanitários, ramais e redes de esgoto com técnica e equipamento apropriados.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section class="section benefits-section" id="beneficios">
+  <div class="section-head">
+    <span class="eyebrow">Por que escolher</span>
+    <h2 class="display">Rota Livre</h2>
+    <p>Mais do que desentupir: queremos resolver o problema com transparência e cuidado.</p>
+  </div>
+
+  <div class="benefits-grid">
+    <div class="benefit">
+      <h3>Atendimento 24 horas</h3>
+      <p>Problemas de entupimento podem acontecer a qualquer momento. Por isso, oferecemos atendimento 24 horas.</p>
+    </div>
+    <div class="benefit">
+      <h3>Orçamento sem compromisso</h3>
+      <p>Avaliamos a situação e explicamos o serviço antes da execução.</p>
+    </div>
+    <div class="benefit">
+      <h3>Equipamentos adequados</h3>
+      <p>Utilizamos ferramentas e equipamentos de acordo com o tipo de obstrução.</p>
+    </div>
+    <div class="benefit">
+      <h3>Limpeza após o serviço</h3>
+      <p>O cuidado com o local faz parte de um atendimento bem executado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="section process-section" id="como-funciona">
+  <div class="section-head">
+    <span class="eyebrow">Atendimento simples</span>
+    <h2 class="display">Como funciona</h2>
+    <p>Do primeiro contato à solução, buscamos deixar tudo claro para você.</p>
+  </div>
+
+  <div class="process-grid">
+    <div class="process-card">
+      <div class="process-number">01</div>
+      <h3>Você entra em contato</h3>
+      <p>Ligue ou envie uma mensagem pelo WhatsApp.</p>
+    </div>
+    <div class="process-card">
+      <div class="process-number">02</div>
+      <h3>Entendemos o problema</h3>
+      <p>Fazemos perguntas para identificar a situação e orientar o atendimento.</p>
+    </div>
+    <div class="process-card">
+      <div class="process-number">03</div>
+      <h3>Avaliamos o local</h3>
+      <p>Identificamos a causa e definimos a melhor solução para o serviço.</p>
+    </div>
+    <div class="process-card">
+      <div class="process-number">04</div>
+      <h3>Executamos o serviço</h3>
+      <p>Realizamos o desentupimento com cuidado, organização e limpeza.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE — com a tubulação animada descendo ao fundo -->
+<section class="section about-section" id="sobre">
+
+  <svg class="plate-schematic" viewBox="0 0 400 600" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+    <path id="pipeV1" class="pipe-outer" d="M 120 -20 L 120 220 L 260 220 L 260 460 L 260 640"/>
+    <path class="pipe-inner" d="M 120 -20 L 120 220 L 260 220 L 260 460 L 260 640"/>
+    <path class="pipe-highlight" d="M 116 -20 L 116 220 L 260 220 L 264 460 L 264 640"/>
+
+    <path id="pipeV2" class="pipe-outer" d="M 320 -20 L 320 340 L 200 340 L 200 640"/>
+    <path class="pipe-inner" d="M 320 -20 L 320 340 L 200 340 L 200 640"/>
+    <path class="pipe-highlight" d="M 316 -20 L 316 340 L 200 340 L 204 640"/>
+
+    <g class="flange" transform="translate(120,220)"><circle r="16"/><circle class="flange-bolt" cx="0" cy="-11" r="2.2"/><circle class="flange-bolt" cx="0" cy="11" r="2.2"/><circle class="flange-bolt" cx="11" cy="0" r="2.2"/><circle class="flange-bolt" cx="-11" cy="0" r="2.2"/></g>
+    <g class="flange" transform="translate(260,460)"><circle r="16"/><circle class="flange-bolt" cx="0" cy="-11" r="2.2"/><circle class="flange-bolt" cx="0" cy="11" r="2.2"/><circle class="flange-bolt" cx="11" cy="0" r="2.2"/><circle class="flange-bolt" cx="-11" cy="0" r="2.2"/></g>
+    <g class="flange" transform="translate(320,340)"><circle r="16"/><circle class="flange-bolt" cx="0" cy="-11" r="2.2"/><circle class="flange-bolt" cx="0" cy="11" r="2.2"/><circle class="flange-bolt" cx="11" cy="0" r="2.2"/><circle class="flange-bolt" cx="-11" cy="0" r="2.2"/></g>
+
+    <circle class="droplet" r="4.5">
+      <animateMotion dur="3.6s" repeatCount="indefinite" begin="0s"><mpath href="#pipeV1"/></animateMotion>
+    </circle>
+    <circle class="droplet" r="4.5">
+      <animateMotion dur="3.6s" repeatCount="indefinite" begin="1.2s"><mpath href="#pipeV1"/></animateMotion>
+    </circle>
+    <circle class="droplet" r="4.5">
+      <animateMotion dur="3.6s" repeatCount="indefinite" begin="2.4s"><mpath href="#pipeV1"/></animateMotion>
+    </circle>
+
+    <circle class="droplet" r="4">
+      <animateMotion dur="4.4s" repeatCount="indefinite" begin="0.6s"><mpath href="#pipeV2"/></animateMotion>
+    </circle>
+    <circle class="droplet" r="4">
+      <animateMotion dur="4.4s" repeatCount="indefinite" begin="2.8s"><mpath href="#pipeV2"/></animateMotion>
+    </circle>
+  </svg>
+
+  <div class="about-grid">
+    <div class="about-copy">
+      <span class="eyebrow">Sobre a Rota Livre</span>
+      <h2 class="display">Resolver bem também é parte do serviço.</h2>
+      <p>A Rota Livre Desentupidora foi criada com o objetivo de oferecer atendimento rápido, transparente e profissional para problemas de entupimento.</p>
+      <p>Trabalhamos com atendimento residencial, comercial e para condomínios em Sorocaba, Votorantim e região.</p>
+      <div class="about-highlight">Excelência em cada detalhe.</div>
     </div>
 
-    <script>
-        const menu = document.getElementById('menu');
-        function toggleMenu() {
-            menu.classList.toggle('show');
-        }
-    </script>
+    <div class="about-side">
+      <div class="team-photo">
+        <img src="images/equipe-tecnico.jpg" alt="Técnico da Rota Livre Desentupidora uniformizado, pronto para o atendimento" loading="lazy">
+      </div>
+
+      <div class="spec-plate">
+        <div class="spec-title">Informações de atendimento</div>
+        <div class="spec-row"><span>Área de atendimento</span><span>Sorocaba, Votorantim e região</span></div>
+        <div class="spec-row"><span>Disponibilidade</span><span>24 horas</span></div>
+        <div class="spec-row"><span>Atendimento</span><span>Residencial e comercial</span></div>
+        <div class="spec-row"><span>Condomínios</span><span>Sim</span></div>
+        <div class="spec-row"><span>Orçamento</span><span>Sem compromisso</span></div>
+        <div class="spec-row"><span>Telefone</span><span>(15) 99607-6661</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-box">
+    <div>
+      <h2 class="display">Entupiu? Não deixe o problema piorar.</h2>
+      <p>Fale com a Rota Livre e solicite seu orçamento.</p>
+    </div>
+    <div class="cta-buttons">
+      <a href="https://wa.me/5515996076661?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20ou%20tirar%20uma%20dúvida." target="_blank" rel="noopener" class="btn btn-whats">💬 Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section" id="faq">
+  <div class="section-head">
+    <span class="eyebrow">Dúvidas frequentes</span>
+    <h2 class="display">Perguntas frequentes</h2>
+  </div>
+
+  <div class="faq-list">
+    <details class="faq">
+      <summary>A Rota Livre atende 24 horas?</summary>
+      <p>Sim. O atendimento é realizado 24 horas, todos os dias, conforme disponibilidade operacional.</p>
+    </details>
+    <details class="faq">
+      <summary>Vocês atendem condomínios?</summary>
+      <p>Sim. Atendemos condomínios, residências e estabelecimentos comerciais em Sorocaba, Votorantim e região.</p>
+    </details>
+    <details class="faq">
+      <summary>Quais tipos de entupimento vocês resolvem?</summary>
+      <p>Trabalhamos com desentupimento de pias, ralos, vasos sanitários e redes de esgoto, além de serviços de limpa fossa.</p>
+    </details>
+    <details class="faq">
+      <summary>Posso pedir orçamento pelo WhatsApp?</summary>
+      <p>Sim. Você pode enviar uma mensagem pelo WhatsApp para explicar o problema e solicitar orientação ou orçamento.</p>
+    </details>
+    <details class="faq">
+      <summary>Vocês quebram o piso ou parede?</summary>
+      <p>Sempre buscamos utilizar métodos e equipamentos que permitam solucionar o problema sem quebra-quebra desnecessário. A necessidade de intervenção depende da situação encontrada no local.</p>
+    </details>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="https://i.postimg.cc/cJFbPYzC/file-000000009c04720e9c8853e16aab9870.png" class="footer-logo" alt="Rota Livre Desentupidora 24h" loading="lazy">
+  <p class="footer-slogan">Excelência em cada detalhe</p>
+  <p class="footer-contact">Sorocaba, Votorantim e região</p>
+  <p class="footer-phone">(15) 99607-6661</p>
+  <p class="copy">© 2026 Rota Livre Desentupidora. Todos os direitos reservados.</p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5515996076661?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20ou%20tirar%20uma%20dúvida." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar com a Rota Livre pelo WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="31" height="31" alt="">
+</a>
+
+<!-- MOBILE BAR -->
+<div class="mobile-bar">
+  <a href="tel:+5515996076661" class="bar-call">📞 Ligar agora</a>
+  <a href="https://wa.me/5515996076661?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20ou%20tirar%20uma%20dúvida." class="bar-whats" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+
+<script>
+const menu = document.getElementById('menu');
+const overlay = document.getElementById('menuOverlay');
+const menuButton = document.querySelector('.menu-btn');
+
+function toggleMenu(){
+  const opened = menu.classList.toggle('show');
+  overlay.classList.toggle('show', opened);
+  menuButton.setAttribute('aria-expanded', opened ? 'true' : 'false');
+  document.body.style.overflow = opened ? 'hidden' : '';
+}
+function closeMenu(){
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+  menuButton.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(event){
+  if(event.key === 'Escape'){ closeMenu(); }
+});
+menu.addEventListener('click', function(event){ event.stopPropagation(); });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Rota Livre Desentupidora 24h",
+  "image":"https://i.postimg.cc/cJFbPYzC/file-000000009c04720e9c8853e16aab9870.png",
+  "description":"Desentupidora 24 horas em Sorocaba, Votorantim e região. Desentupimento de pias, ralos, vasos sanitários, esgoto e limpa fossa.",
+  "telephone":"+5515996076661",
+  "priceRange":"$$",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Sorocaba",
+    "addressRegion":"SP",
+    "addressCountry":"BR"
+  },
+  "areaServed":["Sorocaba","Votorantim"],
+  "openingHoursSpecification":{
+    "@type":"OpeningHoursSpecification",
+    "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens":"00:00",
+    "closes":"23:59"
+  },
+  "serviceType":[
+    "Desentupimento de pia",
+    "Desentupimento de ralo",
+    "Desentupimento de vaso sanitário",
+    "Desentupimento de esgoto",
+    "Limpa fossa"
+  ],
+  "url":"https://desentupidorarotalivre24h.com.br/"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"A Rota Livre atende 24 horas?",
+      "acceptedAnswer":{"@type":"Answer","text":"Sim. O atendimento é realizado 24 horas, todos os dias, conforme disponibilidade operacional."}
+    },
+    {
+      "@type":"Question",
+      "name":"Vocês atendem condomínios?",
+      "acceptedAnswer":{"@type":"Answer","text":"Sim. Atendemos condomínios, residências e estabelecimentos comerciais em Sorocaba, Votorantim e região."}
+    },
+    {
+      "@type":"Question",
+      "name":"Quais tipos de entupimento vocês resolvem?",
+      "acceptedAnswer":{"@type":"Answer","text":"Trabalhamos com desentupimento de pias, ralos, vasos sanitários e redes de esgoto, além de serviços de limpa fossa."}
+    },
+    {
+      "@type":"Question",
+      "name":"Posso pedir orçamento pelo WhatsApp?",
+      "acceptedAnswer":{"@type":"Answer","text":"Sim. Você pode enviar uma mensagem pelo WhatsApp para explicar o problema e solicitar orientação ou orçamento."}
+    },
+    {
+      "@type":"Question",
+      "name":"Vocês quebram o piso ou parede?",
+      "acceptedAnswer":{"@type":"Answer","text":"Sempre buscamos utilizar métodos e equipamentos que permitam solucionar o problema sem quebra-quebra desnecessário. A necessidade de intervenção depende da situação encontrada no local."}
+    }
+  ]
+}
+</script>
+
 </body>
 </html>
