@@ -555,3 +555,24 @@ body{perspective:1200px;}
   .page-hero .slogan,.page-hero h1,.page-hero .lead,.page-hero .btn-row,
   .service-card,.benefit,.process-card,.guia-grid a{animation:none!important;}
 }
+
+
+/* =========================================================
+   PERFORMANCE — renderização sob demanda de blocos abaixo da dobra
+========================================================= */
+.guia-grid,
+.prose,
+.related,
+.footer-links{
+  content-visibility:auto;
+  contain-intrinsic-size:700px;
+}
+
+@media(prefers-reduced-motion:reduce){
+  .guia-grid,
+  .prose,
+  .related,
+  .footer-links{
+    content-visibility:visible;
+  }
+}
