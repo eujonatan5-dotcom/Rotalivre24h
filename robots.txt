@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-# /paginas/ guarda a biblioteca experimental (noindex,follow). Não há links nem sitemap apontando para ela.
-# Só entram nos sitemaps as páginas aprovadas (ver sitemap-index.xml e docs/PLANO-EXPANSAO.md).
-
 Sitemap: https://desentupidorarotalivre24h.com.br/sitemap.xml
-Sitemap: https://desentupidorarotalivre24h.com.br/sitemap-index.xml
