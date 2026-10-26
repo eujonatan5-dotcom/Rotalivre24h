@@ -902,14 +902,6 @@ menu.addEventListener('click', function(event){ event.stopPropagation(); });
 document.getElementById('anoAtual').textContent = new Date().getFullYear();
 </script>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4FWMNRRQJ8"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-4FWMNRRQJ8');
-</script>
 
 <!-- Structured Data: LocalBusiness (foco em Votorantim) -->
 <script type="application/ld+json">
@@ -923,12 +915,6 @@ gtag('config', 'G-4FWMNRRQJ8');
   "image":"https://desentupidorarotalivre24h.com.br/logo.png",
   "description":"Desentupidora em Votorantim, atendimento 24 horas em todos os bairros. Desentupimento de pias, ralos, vasos sanitários, esgoto e limpa fossa.",
   "telephone":"+5515996076661",
-  "address":{
-    "@type":"PostalAddress",
-    "addressLocality":"Votorantim",
-    "addressRegion":"SP",
-    "addressCountry":"BR"
-  },
   "areaServed":{
     "@type":"City",
     "name":"Votorantim"
@@ -1005,5 +991,6 @@ gtag('config', 'G-4FWMNRRQJ8');
  ]
 }
 </script>
+<script src="analytics.js" defer></script>
 </body>
 </html>
