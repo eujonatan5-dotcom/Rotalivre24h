@@ -516,3 +516,42 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
 .stg-main p{color:#C9D5DE;margin-bottom:26px;font-size:1.05rem;}
 .stg-links{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;}
 .stg-links a{display:inline-block;padding:9px 16px;border:1px solid rgba(57,216,197,.28);border-radius:20px;text-decoration:none;color:var(--text);}
+
+
+/* =========================================================
+   CAMADA PROFISSIONAL — motion, profundidade e performance
+========================================================= */
+body{perspective:1200px;}
+.section,.page-hero,.cta-section{transform-style:preserve-3d;}
+.service-card,.benefit,.process-card,.guia-grid a,.spec-plate,.internal-link-box{
+  transform:translateZ(0);
+  will-change:transform;
+}
+@media (hover:hover){
+  .service-card,.benefit,.process-card,.guia-grid a{
+    transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .35s ease;
+  }
+  .benefit:hover{transform:translateY(-5px) translateZ(10px);}
+  .process-card:hover{transform:translateY(-6px) rotateX(1deg) translateZ(10px);box-shadow:0 20px 45px rgba(0,0,0,.35);}
+  .guia-grid a:hover{transform:translateY(-5px) translateZ(8px);box-shadow:0 18px 35px rgba(0,0,0,.28);}
+}
+.page-hero .slogan,.page-hero h1,.page-hero .lead,.page-hero .btn-row{
+  animation:rlFadeUp .55s cubic-bezier(.2,.7,.2,1) both;
+}
+.page-hero h1{animation-delay:.08s;}
+.page-hero .lead{animation-delay:.16s;}
+.page-hero .btn-row{animation-delay:.24s;}
+.service-card,.benefit,.process-card,.guia-grid a{
+  animation:rlFadeUp .65s cubic-bezier(.2,.7,.2,1) both;
+}
+.service-card:nth-child(2),.benefit:nth-child(2),.process-card:nth-child(2),.guia-grid a:nth-child(2){animation-delay:.07s;}
+.service-card:nth-child(3),.benefit:nth-child(3),.process-card:nth-child(3),.guia-grid a:nth-child(3){animation-delay:.14s;}
+.service-card:nth-child(4),.benefit:nth-child(4),.process-card:nth-child(4),.guia-grid a:nth-child(4){animation-delay:.21s;}
+@keyframes rlFadeUp{
+  from{opacity:0;transform:translateY(18px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@media(prefers-reduced-motion:reduce){
+  .page-hero .slogan,.page-hero h1,.page-hero .lead,.page-hero .btn-row,
+  .service-card,.benefit,.process-card,.guia-grid a{animation:none!important;}
+}
