@@ -6,7 +6,7 @@
 <title>Desentupidora Rota Livre 24h | Sorocaba e Votorantim</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Desentupidora 24 horas em Sorocaba e Votorantim: pia, ralo, vaso, esgoto, caixa de gordura e limpa fossa. Orçamento sem compromisso pelo WhatsApp ou telefone.">
+<meta name="description" content="Desentupidora 24 horas em Sorocaba e Votorantim para pia, ralo, vaso sanitário, esgoto, caixa de gordura e limpa fossa. Atendimento residencial, comercial e condomínios. Orçamento sem compromisso.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#050D15">
 <link rel="canonical" href="https://desentupidorarotalivre24h.com.br/">
@@ -372,6 +372,13 @@ a{color:inherit;}
   color:var(--white);text-transform:uppercase;margin-bottom:9px;
 }
 .service-content p{color:var(--muted);font-size:.94rem;line-height:1.65;}
+.service-link{
+  display:inline-flex;align-items:center;gap:7px;margin-top:16px;
+  color:var(--cyan);font-weight:700;font-size:.88rem;text-decoration:none;
+  border-bottom:1px solid rgba(57,216,197,.35);padding-bottom:3px;
+  transition:.2s;
+}
+.service-link:hover{color:var(--white);border-color:var(--cyan);transform:translateX(3px);}
 
 /* =========================================================
    BENEFITS
@@ -729,6 +736,7 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
       <div class="service-content">
         <h3>Pias e ralos</h3>
         <p>Desobstrução de pias, ralos e tubulações com equipamentos adequados para remover gordura, resíduos e outros materiais.</p>
+        <a class="service-link" href="desentupimento-pia.html">Saiba mais sobre o serviço →</a>
       </div>
     </article>
 
@@ -740,6 +748,7 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
       <div class="service-content">
         <h3>Limpa fossa</h3>
         <p>Atendimento para limpeza e esgotamento de fossas, conforme a necessidade do local e do sistema.</p>
+        <a class="service-link" href="limpa-fossa.html">Saiba mais sobre o serviço →</a>
       </div>
     </article>
 
@@ -751,6 +760,7 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
       <div class="service-content">
         <h3>Vasos e esgoto</h3>
         <p>Desentupimento de vasos sanitários, ramais e redes de esgoto com técnica e equipamento apropriados.</p>
+        <a class="service-link" href="desentupimento-esgoto.html">Saiba mais sobre o serviço →</a>
       </div>
     </article>
 
@@ -988,7 +998,23 @@ menu.addEventListener('click', function(event){ event.stopPropagation(); });
     "addressRegion":"SP",
     "addressCountry":"BR"
   },
-  "areaServed":["Sorocaba","Votorantim"],
+  "areaServed":[
+    {"@type":"City","name":"Sorocaba","containedInPlace":{"@type":"State","name":"São Paulo"}},
+    {"@type":"City","name":"Votorantim","containedInPlace":{"@type":"State","name":"São Paulo"}}
+  ],
+  "priceRange":"$",
+  "logo":"https://desentupidorarotalivre24h.com.br/logo.png",
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog",
+    "name":"Serviços de desentupimento",
+    "itemListElement":[
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Desentupimento de pia","areaServed":["Sorocaba","Votorantim"]}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Desentupimento de ralo","areaServed":["Sorocaba","Votorantim"]}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Desentupimento de vaso sanitário","areaServed":["Sorocaba","Votorantim"]}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Desentupimento de esgoto","areaServed":["Sorocaba","Votorantim"]}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Limpa fossa","areaServed":["Sorocaba","Votorantim"]}}
+    ]
+  },
   "openingHoursSpecification":{
     "@type":"OpeningHoursSpecification",
     "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
