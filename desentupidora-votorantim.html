@@ -6,7 +6,7 @@
 <title>Desentupidora em Votorantim 24h | Rota Livre Desentupidora</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Desentupidora em Votorantim, atendimento 24 horas em Votorantim. Desentupimento de pias, ralos, vasos sanitários, esgoto e limpa fossa. Orçamento sem compromisso.">
+<meta name="description" content="Desentupidora em Votorantim, atendimento 24 horas em todos os bairros. Desentupimento de pias, ralos, vasos sanitários, esgoto e limpa fossa. Orçamento sem compromisso.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#050D15">
 <meta name="format-detection" content="telephone=no">
@@ -15,7 +15,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Desentupidora em Votorantim 24h | Rota Livre Desentupidora">
-<meta property="og:description" content="Desentupidora em Votorantim, atendimento 24 horas em Votorantim. Orçamento sem compromisso e garantia no serviço.">
+<meta property="og:description" content="Desentupidora em Votorantim, atendimento 24 horas em todos os bairros. Orçamento sem compromisso.">
 <meta property="og:image" content="https://desentupidorarotalivre24h.com.br/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -27,11 +27,12 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Desentupidora em Votorantim 24h">
-<meta name="twitter:description" content="Desentupidora em Votorantim, atendimento 24 horas em Votorantim. Orçamento sem compromisso.">
+<meta name="twitter:description" content="Desentupidora em Votorantim, atendimento 24 horas em todos os bairros. Orçamento sem compromisso.">
 <meta name="twitter:image" content="https://desentupidorarotalivre24h.com.br/og-image.jpg">
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="manifest" href="site.webmanifest">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
@@ -39,7 +40,6 @@
 <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
 
-<link rel="preload" as="image" href="logo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -519,15 +519,27 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
   }
 }
 
+
+/* ---- extras (blocos de links e rastreio) ---- */
+.service-icon-wrap picture,.team-photo picture{display:block;height:100%;}
+.footer-links{max-width:1100px;margin:0 auto 34px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;text-align:left;}
+.footer-links h2{font-family:'Archivo Expanded',sans-serif;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;}
+.footer-links ul{list-style:none;}
+.footer-links li{margin-bottom:7px;}
+.footer-links a{color:#B2C0CC;text-decoration:none;font-size:.9rem;}
+.footer-links a:hover{color:var(--white);text-decoration:underline;}
+.footer-insta{display:inline-block;margin-top:10px;color:#B2C0CC;font-size:.9rem;}
+@media(max-width:950px){.footer-links{grid-template-columns:1fr 1fr;}}
+@media(max-width:700px){.footer-links{grid-template-columns:1fr;text-align:center;}}
 </style>
 </head>
 
-<body>
+<body data-cidade="Votorantim" data-servico="geral" data-status="producao">
 
 <!-- HEADER -->
 <header class="header">
   <a href="index.html" aria-label="Rota Livre Desentupidora">
-    <img src="logo.png" class="logo-topo" alt="Rota Livre Desentupidora 24h" width="500" height="500">
+    <img src="assets/img/logo-110.png" class="logo-topo" alt="Rota Livre Desentupidora 24h" width="110" height="110">
   </a>
   <div class="header-actions">
     <a href="tel:+5515996076661" class="header-phone" aria-label="Ligar para Rota Livre">
@@ -550,7 +562,7 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
 <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
 <nav class="menu" id="menu" aria-label="Menu principal">
   <div class="menu-top">
-    <img src="logo.png" class="menu-logo" alt="Rota Livre" width="500" height="500">
+    <img src="assets/img/logo-110.png" class="menu-logo" alt="Rota Livre" width="110" height="110">
     <button class="close-btn" onclick="toggleMenu()" aria-label="Fechar menu">
       <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <line x1="18" y1="6" x2="6" y2="18"/>
@@ -564,6 +576,9 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
   <a href="#beneficios" onclick="closeMenu()">Por que escolher a Rota Livre</a>
   <a href="#faq" onclick="closeMenu()">Dúvidas frequentes</a>
   <a href="desentupidora-sorocaba.html" onclick="closeMenu()">Atendemos Sorocaba</a>
+  <a href="condominios/" onclick="closeMenu()">Condomínios</a>
+  <a href="empresas/" onclick="closeMenu()">Empresas</a>
+  <a href="guia/" onclick="closeMenu()">Guia: dúvidas sobre entupimento</a>
   <a href="tel:+5515996076661" class="menu-call">
     <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -577,10 +592,10 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
   <div class="hero-grid">
     <div class="hero-copy">
       <span class="slogan">Desentupidora em Votorantim</span>
-      <span class="hero-tag">Atendimento em Votorantim • 24 horas, conforme disponibilidade operacional</span>
+      <span class="hero-tag">Atendemos todos os bairros de Votorantim • 24 horas por dia</span>
       <h1 class="display">Desentupidora em Votorantim <span class="accent">com atendimento 24h</span></h1>
       <p class="hero-description">
-        A Rota Livre atende Votorantim com desentupimento residencial e comercial.
+        A Rota Livre atende toda a cidade de Votorantim com desentupimento residencial e comercial.
         Equipamento adequado para cada tipo de obstrução, orçamento sem compromisso e limpeza
         do local após o serviço.
       </p>
@@ -620,7 +635,7 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
             <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
           </svg>
         </div>
-        <div class="stat-text"><small>Cobertura</small><strong>Votorantim e regiões atendidas</strong></div>
+        <div class="stat-text"><small>Cobertura</small><strong>Toda a cidade de Votorantim</strong></div>
       </div>
       <div class="hero-stat">
         <div class="stat-icon">
@@ -628,7 +643,7 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
           </svg>
         </div>
-        <div class="stat-text"><small>Compromisso</small><strong>Serviço com garantia</strong></div>
+        <div class="stat-text"><small>Compromisso</small><strong>Transparência no serviço</strong></div>
       </div>
     </div>
   </div>
@@ -652,7 +667,7 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
     <article class="service-card">
       <div class="service-icon-wrap">
         <span class="service-number">01</span>
-        <img src="servico-pia-ralo.jpg" alt="Desentupimento de pia e ralo em Votorantim" loading="lazy" width="600" height="380">
+        <picture><source type="image/webp" srcset="assets/img/servico-pia-ralo.webp"><img src="servico-pia-ralo.jpg" alt="Desentupimento de pia e ralo em Votorantim" loading="lazy" width="640" height="380"></picture>
       </div>
       <div class="service-content">
         <h3>Pias e ralos</h3>
@@ -663,7 +678,7 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
     <article class="service-card">
       <div class="service-icon-wrap">
         <span class="service-number">02</span>
-        <img src="servico-limpa-fossa.jpg" alt="Serviço de limpa fossa em Votorantim" loading="lazy" width="600" height="380">
+        <picture><source type="image/webp" srcset="assets/img/servico-limpa-fossa.webp"><img src="servico-limpa-fossa.jpg" alt="Serviço de limpa fossa em Votorantim" loading="lazy" width="640" height="380"></picture>
       </div>
       <div class="service-content">
         <h3>Limpa fossa</h3>
@@ -674,7 +689,7 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
     <article class="service-card">
       <div class="service-icon-wrap">
         <span class="service-number">03</span>
-        <img src="servico-vasos-esgoto.jpg" alt="Desentupimento de esgoto em Votorantim" loading="lazy" width="600" height="380">
+        <picture><source type="image/webp" srcset="assets/img/servico-vasos-esgoto.webp"><img src="servico-vasos-esgoto.jpg" alt="Desentupimento de esgoto em Votorantim" loading="lazy" width="640" height="380"></picture>
       </div>
       <div class="service-content">
         <h3>Vasos e esgoto</h3>
@@ -789,12 +804,12 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
 
   <div class="faq-list">
     <details class="faq">
-      <summary>A Rota Livre atende Votorantim?</summary>
-      <p>Sim. Atendemos Votorantim e regiões cobertas pela operação, com atendimento 24 horas conforme disponibilidade operacional.</p>
+      <summary>A Rota Livre atende toda a cidade de Votorantim?</summary>
+      <p>Sim. Atendemos todos os bairros e regiões de Votorantim, com atendimento 24 horas.</p>
     </details>
     <details class="faq">
       <summary>Vocês atendem condomínios em Votorantim?</summary>
-      <p>Sim. Atendemos condomínios, residências e estabelecimentos comerciais em Votorantim e nas regiões cobertas pela operação.</p>
+      <p>Sim. Atendemos condomínios, residências e estabelecimentos comerciais em toda a cidade.</p>
     </details>
     <details class="faq">
       <summary>Quais tipos de entupimento vocês resolvem?</summary>
@@ -813,10 +828,16 @@ footer{background:#040B12;color:white;padding:55px 5% 100px;text-align:center;}
 
 <!-- FOOTER -->
 <footer>
-  <img src="logo.png" class="footer-logo" alt="Rota Livre Desentupidora 24h" width="500" height="500" loading="lazy" width="200" height="55">
+<div class="footer-links">
+  <div><h2>Serviços</h2><ul><li><a href="desentupimento-pia/">Desentupimento de pia</a></li><li><a href="desentupimento-ralo/">Desentupimento de ralo</a></li><li><a href="desentupimento-vaso-sanitario/">Desentupimento de vaso sanitário</a></li><li><a href="desentupimento-esgoto/">Desentupimento de esgoto</a></li><li><a href="desentupimento-tubulacao/">Tubulação e encanamento</a></li><li><a href="caixa-de-gordura/">Caixa de gordura</a></li><li><a href="limpa-fossa/">Limpa fossa</a></li></ul></div>
+  <div><h2>Atendimento</h2><ul><li><a href="residencial/">Residencial</a></li><li><a href="comercial/">Comercial</a></li><li><a href="condominios/">Condomínios</a></li><li><a href="empresas/">Empresas</a></li><li><a href="desentupidora-24-horas/">Desentupidora 24 horas</a></li></ul></div>
+  <div><h2>Cidades e guia</h2><ul><li><a href="desentupidora-sorocaba.html">Desentupidora em Sorocaba</a></li><li><a href="desentupidora-votorantim.html">Desentupidora em Votorantim</a></li><li><a href="guia/">Guia de dúvidas</a></li><li><a href="guia/como-prevenir-entupimentos/">Como prevenir entupimentos</a></li><li><a href="guia/quando-chamar-uma-desentupidora/">Quando chamar uma desentupidora</a></li></ul></div>
+</div>
+  <img src="assets/img/logo-110.png" class="footer-logo" alt="Rota Livre Desentupidora 24h" loading="lazy" width="110" height="110">
   <p class="footer-slogan">Excelência em cada detalhe</p>
   <p class="footer-contact">Sorocaba, Votorantim e região</p>
   <a href="tel:+5515996076661" class="footer-phone">(15) 99607-6661</a>
+  <a class="footer-insta" href="https://www.instagram.com/desentupidora.rotalivre24h/" target="_blank" rel="noopener">Instagram @desentupidora.rotalivre24h</a>
   <p class="copy">© <span id="anoAtual">2026</span> Rota Livre Desentupidora. Todos os direitos reservados.</p>
 </footer>
 
@@ -895,11 +916,19 @@ gtag('config', 'G-4FWMNRRQJ8');
 {
   "@context":"https://schema.org",
   "@type":"LocalBusiness",
-  "@id":"https://desentupidorarotalivre24h.com.br/#business",
+  "@id":"https://desentupidorarotalivre24h.com.br/#empresa",
+  "slogan":"Excelência em cada detalhe",
+  "sameAs":["https://www.instagram.com/desentupidora.rotalivre24h/"],
   "name":"Rota Livre Desentupidora 24h",
   "image":"https://desentupidorarotalivre24h.com.br/logo.png",
-  "description":"Desentupidora em Votorantim, atendimento 24 horas em Votorantim. Desentupimento de pias, ralos, vasos sanitários, esgoto e limpa fossa.",
+  "description":"Desentupidora em Votorantim, atendimento 24 horas em todos os bairros. Desentupimento de pias, ralos, vasos sanitários, esgoto e limpa fossa.",
   "telephone":"+5515996076661",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Votorantim",
+    "addressRegion":"SP",
+    "addressCountry":"BR"
+  },
   "areaServed":{
     "@type":"City",
     "name":"Votorantim"
@@ -917,8 +946,7 @@ gtag('config', 'G-4FWMNRRQJ8');
     "Desentupimento de esgoto",
     "Limpa fossa"
   ],
-  "url":"https://desentupidorarotalivre24h.com.br/desentupidora-votorantim.html",
-  "sameAs":["https://www.instagram.com/desentupidora.rotalivre24h/"]
+  "url":"https://desentupidorarotalivre24h.com.br/desentupidora-votorantim.html"
 }
 </script>
 
@@ -930,13 +958,13 @@ gtag('config', 'G-4FWMNRRQJ8');
   "mainEntity":[
     {
       "@type":"Question",
-      "name":"A Rota Livre atende Votorantim?",
-      "acceptedAnswer":{"@type":"Answer","text":"Sim. Atendemos Votorantim e regiões cobertas pela operação, com atendimento 24 horas conforme disponibilidade operacional."}
+      "name":"A Rota Livre atende toda a cidade de Votorantim?",
+      "acceptedAnswer":{"@type":"Answer","text":"Sim. Atendemos todos os bairros e regiões de Votorantim, com atendimento 24 horas."}
     },
     {
       "@type":"Question",
       "name":"Vocês atendem condomínios em Votorantim?",
-      "acceptedAnswer":{"@type":"Answer","text":"Sim. Atendemos condomínios, residências e estabelecimentos comerciais em Votorantim e nas regiões cobertas pela operação."}
+      "acceptedAnswer":{"@type":"Answer","text":"Sim. Atendemos condomínios, residências e estabelecimentos comerciais em toda a cidade."}
     },
     {
       "@type":"Question",
@@ -957,23 +985,26 @@ gtag('config', 'G-4FWMNRRQJ8');
 }
 </script>
 
-
-<script>
-document.addEventListener('click', function(event){
-  const link = event.target.closest('a');
-  if(!link || typeof gtag !== 'function') return;
-  const href = link.getAttribute('href') || '';
-  let method = '';
-  if(href.startsWith('tel:')) method = 'telefone';
-  if(href.includes('wa.me/')) method = 'whatsapp';
-  if(!method) return;
-  gtag('event', 'rota_livre_contact_click', {
-    contact_method: method,
-    link_url: href,
-    page_path: window.location.pathname
-  });
-});
+<script src="assets/js/rotalivre.js" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Início",
+   "item": "https://desentupidorarotalivre24h.com.br/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Desentupidora em Votorantim",
+   "item": "https://desentupidorarotalivre24h.com.br/desentupidora-votorantim.html"
+  }
+ ]
+}
 </script>
-
 </body>
 </html>
