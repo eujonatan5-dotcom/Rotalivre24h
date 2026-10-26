@@ -576,3 +576,11 @@ body{perspective:1200px;}
     content-visibility:visible;
   }
 }
+
+
+/* SEO LOCAL — cobertura por bairros, vias e tipos de atendimento */
+.local-coverage-copy{max-width:900px;margin:-18px 0 34px;color:var(--muted);}
+.local-coverage-copy p{margin-bottom:14px;}
+.local-coverage-copy strong{color:var(--text);}
+.local-subtitle{font-family:'Archivo Expanded',sans-serif;color:var(--white);font-size:1rem;text-transform:uppercase;margin:32px 0 16px;}
+.local-coverage .bairros-list{margin-bottom:8px;}
